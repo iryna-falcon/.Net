@@ -8,7 +8,6 @@ namespace lab_1
         {
             InitializeComponent();
         }
-
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             var tabul = new FunctionTabulation();
