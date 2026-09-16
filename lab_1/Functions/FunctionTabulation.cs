@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Task_1.Functions
+namespace Lab_1.Functions
 {
     public class FunctionTabulation
     {
@@ -11,21 +11,22 @@ namespace Task_1.Functions
 
         private double f1(double x)
         {
-            return Math.Pow(Math.Tan(x + 1), 2) / (Math.Pow(x, 4) + 2 * Math.Pow(x, 3) - x);
+            return 2 * x * Math.Exp(-x);
         }
+
         private double f2(double x)
         {
-            return (2 * x + 2) / (Math.Tan(2 + x - 1) + 1);
+            return Math.Pow(x - 1, 3) + Math.Cos(Math.Pow(x, 3));
         }
+
         private double f3(double x)
         {
-            return Math.Pow(Math.Cos(x + 2), 2) / (Math.Pow(Math.E, -2 * x) + Math.Pow(3 * Math.Pow(x, 2) + 1, 1.0 / 4.0));
+            return 2 * Math.Sqrt(Math.Pow(x, 3)) * Math.Sin(Math.Pow(x, 3));
         }
 
-        public void Tabulation(double xn = -1.9, double xk = 29.7, double h = 0.1, double a = 10)
+        public void Tabulation(double a, double xn = 8, double xk = 12.1, double h = 0.11)
         {
             n = 0;
-
             double x = xn;
 
             while (x <= (xk + h))
@@ -49,7 +50,6 @@ namespace Task_1.Functions
                 }
 
                 xy[n, 0] = x;
-
                 x += h;
                 n++;
             }

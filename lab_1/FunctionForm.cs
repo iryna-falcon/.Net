@@ -1,10 +1,11 @@
-using Task_1.Functions;
+using Lab_1;
+using Lab_1.Functions;
 
 namespace lab_1
 {
-    public partial class Form1 : Form
+    public partial class FunctionForm : Form
     {
-        public Form1()
+        public FunctionForm()
         {
             InitializeComponent();
         }
@@ -24,7 +25,7 @@ namespace lab_1
                 dgvResults.Rows.Clear();
                 chartResults.Series[0].Points.Clear();
 
-                tabul.Tabulation(xn, xk, h, a);
+                tabul.Tabulation(a, xn, xk, h);
 
                 for (int i = 0; i < tabul.n; i++)
                 {
@@ -40,6 +41,20 @@ namespace lab_1
             {
                 MessageBox.Show("Data entry error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void onedimensionalArraysToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = new OneDimensionalArray();
+            f.Show();
+            this.Hide();
+        }
+
+        private void twodimensionalArraysToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = new TwoDimensionalArrays();
+            f.Show();
+            this.Hide();
         }
     }
 }

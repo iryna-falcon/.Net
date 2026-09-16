@@ -1,6 +1,6 @@
 ﻿namespace lab_1
 {
-    partial class Form1
+    partial class FunctionForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FunctionForm));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -47,9 +47,14 @@
             txtH = new TextBox();
             txtXk = new TextBox();
             txtA = new TextBox();
+            menuStrip1 = new MenuStrip();
+            workingWithArraysToolStripMenuItem = new ToolStripMenuItem();
+            onedimensionalArraysToolStripMenuItem = new ToolStripMenuItem();
+            twodimensionalArraysToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dgvResults).BeginInit();
             ((System.ComponentModel.ISupportInitialize)chartResults).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -128,18 +133,18 @@
             // 
             // chartResults
             // 
-            chartArea2.Name = "ChartArea1";
-            chartResults.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            chartResults.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            chartResults.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            chartResults.Legends.Add(legend1);
             chartResults.Location = new Point(320, 152);
             chartResults.Name = "chartResults";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            chartResults.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chartResults.Series.Add(series1);
             chartResults.Size = new Size(435, 293);
             chartResults.TabIndex = 7;
             chartResults.Text = "chart1";
@@ -182,7 +187,37 @@
             txtA.Size = new Size(78, 23);
             txtA.TabIndex = 12;
             // 
-            // Form1
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { workingWithArraysToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.TabIndex = 13;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // workingWithArraysToolStripMenuItem
+            // 
+            workingWithArraysToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { onedimensionalArraysToolStripMenuItem, twodimensionalArraysToolStripMenuItem });
+            workingWithArraysToolStripMenuItem.Name = "workingWithArraysToolStripMenuItem";
+            workingWithArraysToolStripMenuItem.Size = new Size(124, 20);
+            workingWithArraysToolStripMenuItem.Text = "Working with arrays";
+            // 
+            // onedimensionalArraysToolStripMenuItem
+            // 
+            onedimensionalArraysToolStripMenuItem.Name = "onedimensionalArraysToolStripMenuItem";
+            onedimensionalArraysToolStripMenuItem.Size = new Size(200, 22);
+            onedimensionalArraysToolStripMenuItem.Text = "One-dimensional arrays";
+            onedimensionalArraysToolStripMenuItem.Click += onedimensionalArraysToolStripMenuItem_Click;
+            // 
+            // twodimensionalArraysToolStripMenuItem
+            // 
+            twodimensionalArraysToolStripMenuItem.Name = "twodimensionalArraysToolStripMenuItem";
+            twodimensionalArraysToolStripMenuItem.Size = new Size(200, 22);
+            twodimensionalArraysToolStripMenuItem.Text = "Two-dimensional arrays";
+            twodimensionalArraysToolStripMenuItem.Click += twodimensionalArraysToolStripMenuItem_Click;
+            // 
+            // FunctionForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -200,11 +235,15 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "Form1";
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Name = "FunctionForm";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dgvResults).EndInit();
             ((System.ComponentModel.ISupportInitialize)chartResults).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -226,5 +265,9 @@
         private TextBox txtH;
         private TextBox txtXk;
         private TextBox txtA;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem workingWithArraysToolStripMenuItem;
+        private ToolStripMenuItem onedimensionalArraysToolStripMenuItem;
+        private ToolStripMenuItem twodimensionalArraysToolStripMenuItem;
     }
 }
