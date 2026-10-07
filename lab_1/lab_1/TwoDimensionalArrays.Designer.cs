@@ -32,6 +32,7 @@
             label1 = new Label();
             btnCalculate = new Button();
             btnClose = new Button();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvMatrix).BeginInit();
             SuspendLayout();
             // 
@@ -73,11 +74,21 @@
             btnClose.UseVisualStyleBackColor = true;
             btnClose.Click += btnClose_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(470, 302);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 15);
+            label2.TabIndex = 4;
+            label2.Text = "label2";
+            // 
             // TwoDimensionalArrays
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
             Controls.Add(btnClose);
             Controls.Add(btnCalculate);
             Controls.Add(label1);
@@ -95,5 +106,6 @@
         private Label label1;
         private Button btnCalculate;
         private Button btnClose;
+        private Label label2;
     }
 }

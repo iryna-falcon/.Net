@@ -58,5 +58,24 @@ namespace Lab_1.Arrays
                 }
             }
         }
+
+        public int max()
+        {
+            int maxItem = 0;
+            for(int i = 1; i< XLength; i++)
+            {
+                for(int j = 1; j < YLength; j++)
+                {
+                    if(i == j)
+                    {
+                        if (Array[i,j] > maxItem)
+                        {
+                            maxItem = Array[i, j];
+                        }
+                    }
+                }
+            }
+            return maxItem;
+        }
     }
 }

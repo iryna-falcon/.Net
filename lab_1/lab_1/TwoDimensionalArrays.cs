@@ -49,6 +49,7 @@ namespace Lab_1
                         dgvMatrix.Rows[i].Cells[j].Value = matrix[i, j].ToString();
                     }
                 }
+                label2.Text = matrix.max().ToString();
             }
             catch (Exception ex)
             {

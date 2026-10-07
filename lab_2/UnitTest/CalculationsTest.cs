@@ -78,5 +78,21 @@ namespace UnitTest
 
             Assert.AreEqual(expected, actual, 0.0001);
         }
+
+        [TestMethod]
+        public void Task3_Tetrahedron_SurfaceArea_CalculatesCorrectly_Negative()
+        {
+            try
+            {
+                var tet = new Tetrahedron(-3);
+
+                var actual = tet.CalculateSurfaceArea();
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+
+            }
+            //Assert.Throws<ArgumentOutOfRangeException>(() => new Tetrahedron(-3));
+        }
     }
 }

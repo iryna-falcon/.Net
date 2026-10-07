@@ -9,7 +9,17 @@ namespace lab_2
 
         public Tetrahedron() { }
         public Tetrahedron(double a) { this.a = a; }
-        public Tetrahedron(double a, string dummyArg) { this.a = a; }
+        public Tetrahedron(double a, string dummyArg) 
+        {
+            if (a >= 0)
+            {
+                this.a = a;
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+        }
 
         public double CalculateVolume()
         {

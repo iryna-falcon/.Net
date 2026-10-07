@@ -1,9 +1,10 @@
-﻿using System;
+﻿using lab_4.Interfaces;
+using System;
 using System.Windows;
 
-namespace lab_3
+namespace lab_4.ArtWork
 {
-    public class Sculpture : ArtWork
+    public class Sculpture : ArtWork, IInsurable
     {
         public string Material { get; set; }
 
@@ -18,16 +19,13 @@ namespace lab_3
             return DateTime.Now.Year - CreationYear;
         }
 
-        public override void Evaluate()
+        public override string Evaluate()
         {
             Value += Value * 0.15;
-            MessageBox.Show($"Скульптуру '{Title}' (Матеріал: {Material}) оцінено. Нова вартість: {Value} грн.");
+            return $"Скульптуру '{Title}' оцінено. Нова вартість: {Value} грн.";
         }
 
-        public override void Restore()
-        {
-            MessageBox.Show($"Проводиться очищення та реставрація скульптури '{Title}'.");
-        }
+        public override string Restore() => $"Очищення та реставрація скульптури '{Title}'.";
 
         public static double ValueAll(List<ArtWork> sculptures)
         {
@@ -38,5 +36,7 @@ namespace lab_3
             }
             return sum;
         }
+
+        public double GetInsuranceCost() => Value * 0.07;
     }
 }
