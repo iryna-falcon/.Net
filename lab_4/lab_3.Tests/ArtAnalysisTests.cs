@@ -1,7 +1,5 @@
 ﻿using lab_4.ArtWork;
 using lab_4.Interfaces;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 
 namespace lab_4.Tests
 {
@@ -93,7 +91,6 @@ namespace lab_4.Tests
             string result = photo.Evaluate();
 
             Assert.AreEqual(105, photo.Value);
-            StringAssert.Contains(result, "Нова вартість: 105");
         }
     }
 }

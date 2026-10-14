@@ -10,7 +10,10 @@ namespace lab_4.ArtWork
         public string CameraModel { get; set; }
 
         public Photography(string title, int creationYear, string author, double value, string cameraModel)
-            : base(title, creationYear, author, value) { CameraModel = cameraModel; }
+            : base(title, creationYear, author, value) 
+        { 
+            CameraModel = cameraModel; 
+        }
 
         public override string Evaluate()
         {
